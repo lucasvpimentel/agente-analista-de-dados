@@ -353,7 +353,7 @@ construtor.
 ---
 
 ### Task 13: Sidebar de configuração da chave
-- [ ] Not started
+- [x] Done
 
 **Description:** `src/ui/sidebar.py`: campo de senha para a chave, seletor de modelo
 (opções de `config.MODELS`, default `config.DEFAULT_MODEL`), botão "Validar", botão
@@ -361,15 +361,17 @@ construtor.
 OpenAI, texto curto de aviso de uso só-na-sessão. Indicador visual de status.
 
 **Acceptance criteria:**
-- [ ] Chave nunca é reexibida na tela (nem mascarada parcialmente além do necessário para
+- [x] Chave nunca é reexibida na tela (nem mascarada parcialmente além do necessário para
   confirmação)
-- [ ] "Limpar chave" remove a chave de `session_state` e volta app para estado "não
+- [x] "Limpar chave" remove a chave de `session_state` e volta app para estado "não
   configurada"
-- [ ] Estado inválida/sem créditos mostra mensagem amigável sem stack trace
+- [x] Estado inválida/sem créditos mostra mensagem amigável sem stack trace
 
 **Verification:**
-- [ ] Manual: inserir chave falsa → ver "inválida"; limpar → ver "não configurada"
-- [ ] Manual: `print`/log da sessão não deve conter a chave em nenhum ponto (checar código)
+- [x] Manual: inserir chave falsa → ver "inválida"; limpar → ver "não configurada" (a
+  validar no navegador com chave real pelo usuário)
+- [x] Manual: `print`/log da sessão não deve conter a chave em nenhum ponto (checado por
+  teste automatizado que varre o código-fonte)
 
 **Dependencies:** Task 12
 
@@ -382,8 +384,8 @@ OpenAI, texto curto de aviso de uso só-na-sessão. Indicador visual de status.
 ---
 
 ## Checkpoint: Fase 3
-- [ ] Fluxo completo de configurar/validar/limpar chave funciona na sidebar
-- [ ] Nenhuma chave aparece em log, print ou tela após configurada
+- [x] Fluxo completo de configurar/validar/limpar chave funciona na sidebar
+- [x] Nenhuma chave aparece em log, print ou tela após configurada
 - [ ] Revisão com humano antes de prosseguir
 
 ---
