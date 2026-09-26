@@ -212,17 +212,17 @@ alerta de categoria rara (abaixo de threshold configurável em `config.py`).
 ---
 
 ### Task 8: Estatísticas de data/hora
-- [ ] Not started
+- [x] Done
 
 **Description:** `src/profiling/datetime_stats.py`: intervalo (min/max), granularidade
 detectada (diária/mensal/etc.), lacunas temporais, série de contagem por período.
 
 **Acceptance criteria:**
-- [ ] Granularidade detectada corretamente para série diária e mensal sintéticas
-- [ ] Lacunas (datas faltantes) detectadas corretamente em série com buraco proposital
+- [x] Granularidade detectada corretamente para série diária e mensal sintéticas
+- [x] Lacunas (datas faltantes) detectadas corretamente em série com buraco proposital
 
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_profiling_datetime.py`
+- [x] Tests pass: `pytest tests/test_profiling_datetime.py`
 
 **Dependencies:** Task 5
 
