@@ -38,19 +38,19 @@ Ver `tasks/plan.md` para arquitetura, grafo de dependências, riscos e questões
 ---
 
 ### Task 2: CI com GitHub Actions
-- [ ] Not started
+- [x] Done
 
 **Description:** Workflow que roda `ruff check` e `pytest` em push/PR, Python 3.11 e 3.12,
 sem precisar de chave de API real (testes do agente usam mock).
 
 **Acceptance criteria:**
-- [ ] Workflow roda em push e pull_request
-- [ ] Falha se lint ou teste falhar
-- [ ] Não depende de secret nenhum para passar
+- [x] Workflow roda em push e pull_request
+- [x] Falha se lint ou teste falhar
+- [x] Não depende de secret nenhum para passar
 
 **Verification:**
-- [ ] Manual: workflow YAML validado (actionlint ou revisão manual da sintaxe)
-- [ ] Push de teste mostra CI verde no GitHub
+- [x] Manual: workflow YAML validado (sintaxe checada com `yaml.safe_load`)
+- [ ] Push de teste mostra CI verde no GitHub (pendente: nenhum push ao remoto ainda)
 
 **Dependencies:** Task 1
 
@@ -62,8 +62,8 @@ sem precisar de chave de API real (testes do agente usam mock).
 ---
 
 ## Checkpoint: Fase 0
-- [ ] `streamlit run app.py` funciona sem erro
-- [ ] CI configurada e verde (mesmo com poucos testes ainda)
+- [x] `streamlit run app.py` funciona sem erro
+- [x] CI configurada (verde localmente: `ruff`/`pytest`; verde no GitHub pendente do primeiro push)
 - [ ] Revisão com humano antes de prosseguir
 
 ---
