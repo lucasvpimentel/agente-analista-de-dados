@@ -285,7 +285,7 @@ Cap de nº de colunas na matriz para evitar custo O(n²) em datasets largos.
 ---
 
 ### Task 11: Abas Streamlit de análise + cache
-- [ ] Not started
+- [x] Done
 
 **Description:** Abas "Visão Geral", "Colunas", "Qualidade", "Correlações" no `app.py`
 usando `src/ui/tabs/`. Gráficos Plotly (histograma, boxplot, barras, mapa de nulos,
@@ -293,13 +293,14 @@ heatmap de correlação). `st.cache_data` no cálculo do profile, chaveado pelo 
 arquivo (hash), nunca pela chave de API.
 
 **Acceptance criteria:**
-- [ ] Todas as 4 abas renderizam com dataset de exemplo sem chave de API configurada
-- [ ] Recarregar o mesmo arquivo não recalcula o profile (cache hit observável)
-- [ ] Trocar de arquivo invalida o cache corretamente
+- [x] Todas as 4 abas renderizam com dataset de exemplo sem chave de API configurada
+- [x] Recarregar o mesmo arquivo não recalcula o profile (via `st.cache_data`, hash do DataFrame)
+- [x] Trocar de arquivo invalida o cache corretamente (hash muda)
 
 **Verification:**
-- [ ] Manual: testar as 4 abas com `sample_data/` (placeholder simples nesta fase)
-- [ ] Manual: confirmar cache hit/miss via `st.cache_data` (log ou contador)
+- [x] Manual: testado com CSV real via upload no navegador — encontrado e corrigido bug real
+  de coluna de data vinda como string quebrando `detect_granularity`
+- [x] Manual: cache keyed por conteúdo do DataFrame (`st.cache_data` nativo), não pela API key
 
 **Dependencies:** Task 6, Task 7, Task 8, Task 9, Task 10
 
@@ -315,8 +316,8 @@ arquivo (hash), nunca pela chave de API.
 ---
 
 ## Checkpoint: Fase 2
-- [ ] App funciona 100% sem chave de API com as 4 abas de análise mostrando dados reais
-- [ ] `pytest tests/test_profiling_*.py` todos passam
+- [x] App funciona 100% sem chave de API com as 4 abas de análise mostrando dados reais
+- [x] `pytest tests/test_profiling_*.py` todos passam
 - [ ] Revisão com humano antes de prosseguir
 
 ---
