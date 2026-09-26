@@ -235,19 +235,19 @@ detectada (diária/mensal/etc.), lacunas temporais, série de contagem por perí
 ---
 
 ### Task 9: Qualidade de dados
-- [ ] Not started
+- [x] Done
 
 **Description:** `src/profiling/quality.py`: nulos por coluna (para mapa de nulos),
 colunas constantes, colunas quase-únicas, possíveis linhas duplicadas, lista de alertas
 priorizados por severidade (combina sinais das tasks 5-8).
 
 **Acceptance criteria:**
-- [ ] Coluna 100% nula, coluna constante e coluna quase-única são detectadas em dataset
+- [x] Coluna 100% nula, coluna constante e coluna quase-única são detectadas em dataset
   sintético desenhado para isso
-- [ ] Alertas saem ordenados por severidade
+- [x] Alertas saem ordenados por severidade
 
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_profiling_quality.py`
+- [x] Tests pass: `pytest tests/test_profiling_quality.py`
 
 **Dependencies:** Task 5, Task 6, Task 7
 
