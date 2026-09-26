@@ -3,7 +3,7 @@ import streamlit as st
 
 from src.profiling.pipeline import build_profile
 from src.ui import sidebar, upload
-from src.ui.tabs import colunas, correlacoes, qualidade, visao_geral
+from src.ui.tabs import agente_ia, colunas, correlacoes, qualidade, visao_geral
 
 
 @st.cache_data
@@ -21,8 +21,8 @@ df, meta = upload.render()
 
 if df is not None:
     profile = _cached_profile(df)
-    tab_visao_geral, tab_colunas, tab_qualidade, tab_correlacoes = st.tabs(
-        ["Visão Geral", "Colunas", "Qualidade", "Correlações"]
+    tab_visao_geral, tab_colunas, tab_qualidade, tab_correlacoes, tab_agente_ia = st.tabs(
+        ["Visão Geral", "Colunas", "Qualidade", "Correlações", "Agente IA"]
     )
     with tab_visao_geral:
         visao_geral.render(profile)
@@ -32,3 +32,5 @@ if df is not None:
         qualidade.render(profile, df)
     with tab_correlacoes:
         correlacoes.render(profile)
+    with tab_agente_ia:
+        agente_ia.render(profile, df)
