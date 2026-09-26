@@ -164,19 +164,19 @@ permite override manual do tipo inferido (recebe dict de overrides).
 ---
 
 ### Task 6: Estatísticas numéricas + outliers
-- [ ] Not started
+- [x] Done
 
 **Description:** `src/profiling/numeric.py`: média, mediana, desvio padrão, mín, máx,
 quartis, IQR, assimetria, curtose, contagem de zeros/negativos, outliers por IQR e por
 z-score. Funções separadas para dados de histograma/boxplot (Plotly fica na Task 11).
 
 **Acceptance criteria:**
-- [ ] Todas as métricas batem com cálculo de referência (numpy/scipy) num dataset conhecido
-- [ ] Outliers IQR e z-score retornam índices/contagens consistentes com dataset sintético
+- [x] Todas as métricas batem com cálculo de referência (numpy/scipy) num dataset conhecido
+- [x] Outliers IQR e z-score retornam índices/contagens consistentes com dataset sintético
   com outliers propositais
 
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_profiling_numeric.py`
+- [x] Tests pass: `pytest tests/test_profiling_numeric.py`
 
 **Dependencies:** Task 5
 
