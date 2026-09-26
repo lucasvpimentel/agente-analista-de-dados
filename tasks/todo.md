@@ -136,7 +136,7 @@ detectados, se foi amostrado) e preview das primeiras linhas.
 ## Fase 2: Profile determinístico (fatia vertical: dados → abas de análise)
 
 ### Task 5: Inferência de tipo + overview geral
-- [ ] Not started
+- [x] Done
 
 **Description:** `src/profiling/overview.py`: nº linhas/colunas, uso de memória, linhas
 duplicadas, % nulos total. `src/profiling/types.py`: inferir tipo por coluna (numérica,
@@ -144,12 +144,12 @@ categórica, data/hora, texto livre, booleana, ID de alta cardinalidade) com fun
 permite override manual do tipo inferido (recebe dict de overrides).
 
 **Acceptance criteria:**
-- [ ] Overview retorna todos os números esperados para um DataFrame de teste conhecido
-- [ ] Inferência de tipo acerta os 6 tipos em um dataset sintético com um exemplo de cada
-- [ ] Override manual de tipo é respeitado no retorno
+- [x] Overview retorna todos os números esperados para um DataFrame de teste conhecido
+- [x] Inferência de tipo acerta os 6 tipos em um dataset sintético com um exemplo de cada
+- [x] Override manual de tipo é respeitado no retorno
 
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_profiling_overview.py tests/test_profiling_types.py`
+- [x] Tests pass: `pytest tests/test_profiling_overview.py tests/test_profiling_types.py`
 
 **Dependencies:** Task 3
 
