@@ -1,0 +1,14 @@
+"""Configuração central do DataLens: modelos, limites e thresholds."""
+
+MODELS = ["gpt-4o-mini", "gpt-4o", "gpt-4.1-mini"]
+DEFAULT_MODEL = "gpt-4o-mini"
+
+MAX_FILE_SIZE_MB = 200
+MAX_ROWS_FULL_PROFILE = 200_000
+SAMPLE_ROWS_FOR_AGENT = 20
+
+OUTLIER_IQR_MULTIPLIER = 1.5
+OUTLIER_ZSCORE_THRESHOLD = 3.0
+RARE_CATEGORY_THRESHOLD = 0.01
+CORRELATION_THRESHOLD = 0.7
+MAX_CORRELATION_COLUMNS = 50
