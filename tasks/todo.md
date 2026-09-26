@@ -418,7 +418,7 @@ separada da chamada ao provider, para ser testável isoladamente.
 ---
 
 ### Task 15: Aba "Agente IA" — resumo executivo
-- [ ] Not started
+- [x] Done
 
 **Description:** Aba mostra estado vazio orientando a configurar a chave quando ausente;
 com chave válida, botão gera resumo executivo (características principais, problemas de
@@ -428,15 +428,16 @@ limit, timeout, modelo indisponível) com mensagens pt-BR sem expor a chave. Avi
 privacidade (o que é enviado à OpenAI, custo é do dono da chave).
 
 **Acceptance criteria:**
-- [ ] Sem chave: estado vazio orientando a configurar na sidebar, resto do app funciona
-- [ ] Com chave válida: resumo executivo é gerado e exibido
-- [ ] Cada tipo de erro simulado (mock) produz mensagem pt-BR específica, nunca stack trace
+- [x] Sem chave: estado vazio orientando a configurar na sidebar, resto do app funciona
+- [x] Com chave válida: resumo executivo é gerado e exibido
+- [x] Cada tipo de erro simulado (mock) produz mensagem pt-BR específica, nunca stack trace
   cru nem a chave
 
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_agent_orchestrator.py` cobre os cenários de erro via
-  provider mockado
-- [ ] Manual: gerar resumo com chave real de teste (custo mínimo) no dataset de exemplo
+- [x] Tests pass: `pytest tests/test_ui_agente_ia.py` cobre os cenários de erro via provider
+  mockado (auth, rate limit/cota, timeout, modelo não encontrado, conexão)
+- [ ] Manual: gerar resumo com chave real de teste (custo mínimo) no dataset de exemplo —
+  pendente do usuário
 
 **Dependencies:** Task 13, Task 14
 
@@ -449,8 +450,8 @@ privacidade (o que é enviado à OpenAI, custo é do dono da chave).
 ---
 
 ## Checkpoint: Fase 4
-- [ ] Resumo executivo funciona ponta a ponta com chave real de teste
-- [ ] Todos os cenários de erro mockados passam em teste
+- [ ] Resumo executivo funciona ponta a ponta com chave real de teste (pendente do usuário)
+- [x] Todos os cenários de erro mockados passam em teste
 - [ ] Revisão com humano antes de prosseguir
 
 ---
