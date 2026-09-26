@@ -22,5 +22,5 @@ def render(profile: dict, df) -> None:
     percentages = null_percentages(df)
     st.plotly_chart(
         px.bar(x=list(percentages.keys()), y=list(percentages.values()), title="% de nulos"),
-        use_container_width=True,
+        width='stretch',
     )

@@ -1,6 +1,5 @@
 import httpx
 import openai
-import pytest
 
 from src.agent.provider import OpenAIProvider
 

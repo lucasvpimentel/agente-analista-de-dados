@@ -4,8 +4,8 @@ import pytest
 
 from src import config
 from src.profiling.correlations import (
-    cramers_v,
     compute_correlation_matrices,
+    cramers_v,
     find_high_correlation_pairs,
 )
 

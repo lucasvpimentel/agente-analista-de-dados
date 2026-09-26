@@ -12,8 +12,8 @@ def _render_numeric(series: pd.Series, stats: dict) -> None:
     metrics[2].metric("Desvio padrão", f"{stats['std']:.2f}")
     metrics[3].metric("Outliers (IQR)", stats["outliers_iqr"]["count"])
 
-    st.plotly_chart(px.histogram(series, title="Histograma"), use_container_width=True)
-    st.plotly_chart(px.box(series, title="Boxplot"), use_container_width=True)
+    st.plotly_chart(px.histogram(series, title="Histograma"), width='stretch')
+    st.plotly_chart(px.box(series, title="Boxplot"), width='stretch')
 
 
 def _render_categorical(stats: dict) -> None:
@@ -24,7 +24,7 @@ def _render_categorical(stats: dict) -> None:
     frequencies = stats["top_frequencies"]
     st.plotly_chart(
         px.bar(x=list(frequencies.keys()), y=list(frequencies.values()), title="Top categorias"),
-        use_container_width=True,
+        width='stretch',
     )
 
 
@@ -38,7 +38,7 @@ def _render_datetime(stats: dict) -> None:
                 y=list(stats["counts_by_period"].values()),
                 title="Contagem por período",
             ),
-            use_container_width=True,
+            width='stretch',
         )
 
 

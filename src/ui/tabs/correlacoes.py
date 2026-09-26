@@ -17,7 +17,7 @@ def render(profile: dict) -> None:
     method = st.radio("Método", ["pearson", "spearman"], horizontal=True)
     st.plotly_chart(
         px.imshow(correlations[method], text_auto=".2f", title=f"Correlação ({method})"),
-        use_container_width=True,
+        width='stretch',
     )
 
     pairs = profile["high_correlation_pairs"]
