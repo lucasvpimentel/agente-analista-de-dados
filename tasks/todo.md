@@ -7,7 +7,7 @@ Ver `tasks/plan.md` para arquitetura, grafo de dependências, riscos e questões
 ## Fase 0: Scaffold
 
 ### Task 1: Estrutura de pastas, config, requirements, tema
-- [ ] Not started
+- [x] Done
 
 **Description:** Criar esqueleto do projeto: `app.py` na raiz, pacote `src/` (vazio com
 `__init__.py` nos submódulos previstos: `ingestion`, `profiling`, `agent`, `export`, `ui`),
@@ -16,13 +16,13 @@ Ver `tasks/plan.md` para arquitetura, grafo de dependências, riscos e questões
 `__pycache__`, `.venv`).
 
 **Acceptance criteria:**
-- [ ] `streamlit run app.py` sobe sem erro e mostra página placeholder
-- [ ] `src/config.py` é o único lugar com nomes de modelo/limites (nada hardcoded alhures)
-- [ ] `.gitignore` cobre `.env` e `.streamlit/secrets.toml`
+- [x] `streamlit run app.py` sobe sem erro e mostra página placeholder
+- [x] `src/config.py` é o único lugar com nomes de modelo/limites (nada hardcoded alhures)
+- [x] `.gitignore` cobre `.env` e `.streamlit/secrets.toml`
 
 **Verification:**
-- [ ] Manual: `streamlit run app.py` abre local sem exceção
-- [ ] Manual: `git status` não lista `.env`/`secrets.toml` se criados
+- [x] Manual: `streamlit run app.py` abre local sem exceção
+- [x] Manual: `git status` não lista `.env`/`secrets.toml` se criados
 
 **Dependencies:** None
 
