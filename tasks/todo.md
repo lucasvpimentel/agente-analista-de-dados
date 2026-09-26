@@ -260,19 +260,19 @@ priorizados por severidade (combina sinais das tasks 5-8).
 ---
 
 ### Task 10: Correlações
-- [ ] Not started
+- [x] Done
 
 **Description:** `src/profiling/correlations.py`: matriz Pearson e Spearman para numéricas,
 destaque de pares acima de `CORRELATION_THRESHOLD`; Cramér's V opcional para categóricas.
 Cap de nº de colunas na matriz para evitar custo O(n²) em datasets largos.
 
 **Acceptance criteria:**
-- [ ] Matrizes Pearson/Spearman corretas num dataset com correlação conhecida
-- [ ] Pares acima do threshold aparecem destacados
-- [ ] Nº de colunas acima do cap é truncado com aviso, não trava o app
+- [x] Matrizes Pearson/Spearman corretas num dataset com correlação conhecida
+- [x] Pares acima do threshold aparecem destacados
+- [x] Nº de colunas acima do cap é truncado com aviso, não trava o app
 
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_profiling_correlations.py`
+- [x] Tests pass: `pytest tests/test_profiling_correlations.py`
 
 **Dependencies:** Task 5, Task 6
 
