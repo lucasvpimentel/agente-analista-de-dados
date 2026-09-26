@@ -325,7 +325,7 @@ arquivo (hash), nunca pela chave de API.
 ## Fase 3: Configuração da chave de API (sidebar)
 
 ### Task 12: Interface LLMProvider + OpenAIProvider (validação)
-- [ ] Not started
+- [x] Done
 
 **Description:** `src/agent/provider.py`: classe abstrata `LLMProvider` com
 `generate_summary(profile) -> str`, `chat(messages, profile) -> Iterator[str]` e
@@ -334,13 +334,13 @@ arquivo (hash), nunca pela chave de API.
 construtor.
 
 **Acceptance criteria:**
-- [ ] `validate_key()` distingue chave inválida, sem créditos e chave válida (mockando a
+- [x] `validate_key()` distingue chave inválida, sem créditos e chave válida (mockando a
   API da OpenAI nos testes)
-- [ ] Nenhum método lê `st.session_state` ou variável global — tudo por parâmetro/atributo
+- [x] Nenhum método lê `st.session_state` ou variável global — tudo por parâmetro/atributo
   de instância
 
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_agent_provider.py` (client OpenAI mockado)
+- [x] Tests pass: `pytest tests/test_agent_provider.py` (client OpenAI mockado)
 
 **Dependencies:** Task 1
 
