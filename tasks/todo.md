@@ -393,7 +393,7 @@ OpenAI, texto curto de aviso de uso só-na-sessão. Indicador visual de status.
 ## Fase 4: Agente — resumo executivo
 
 ### Task 14: Orquestrador do agente (contexto)
-- [ ] Not started
+- [x] Done
 
 **Description:** `src/agent/orchestrator.py`: monta contexto para o LLM a partir do
 profile resumido (JSON compacto), schema de colunas e amostra pequena de dados
@@ -401,11 +401,11 @@ profile resumido (JSON compacto), schema de colunas e amostra pequena de dados
 separada da chamada ao provider, para ser testável isoladamente.
 
 **Acceptance criteria:**
-- [ ] Contexto gerado nunca inclui mais que `SAMPLE_ROWS_FOR_AGENT` linhas de dado bruto
-- [ ] Contexto é serializável em JSON sem erro para todos os tipos de coluna suportados
+- [x] Contexto gerado nunca inclui mais que `SAMPLE_ROWS_FOR_AGENT` linhas de dado bruto
+- [x] Contexto é serializável em JSON sem erro para todos os tipos de coluna suportados
 
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_agent_orchestrator.py`
+- [x] Tests pass: `pytest tests/test_agent_orchestrator.py`
 
 **Dependencies:** Task 9, Task 10, Task 12
 
