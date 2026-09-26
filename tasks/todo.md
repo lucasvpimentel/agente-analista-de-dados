@@ -71,7 +71,7 @@ sem precisar de chave de API real (testes do agente usam mock).
 ## Fase 1: Ingestão (fatia vertical: upload → preview)
 
 ### Task 3: Módulo de ingestão
-- [ ] Not started
+- [x] Done
 
 **Description:** `src/ingestion.py` com função que recebe arquivo enviado (bytes/objeto do
 Streamlit) e retorna `DataFrame` + metadados (nome da aba escolhida, encoding/separador
@@ -81,15 +81,15 @@ abas e ler a escolhida. Aplicar `MAX_FILE_SIZE_MB` e amostragem acima de
 `MAX_ROWS_FULL_PROFILE` (de `src/config.py`).
 
 **Acceptance criteria:**
-- [ ] CSV com `;` e vírgula decimal (padrão BR) é lido corretamente
-- [ ] CSV UTF-8 e Latin-1 são lidos corretamente
-- [ ] Excel com múltiplas abas retorna lista de abas para escolha
-- [ ] Arquivo acima do limite de tamanho é rejeitado com mensagem clara
-- [ ] Dataset acima de `MAX_ROWS_FULL_PROFILE` é amostrado e o metadado indica isso
+- [x] CSV com `;` e vírgula decimal (padrão BR) é lido corretamente
+- [x] CSV UTF-8 e Latin-1 são lidos corretamente
+- [x] Excel com múltiplas abas retorna lista de abas para escolha
+- [x] Arquivo acima do limite de tamanho é rejeitado com mensagem clara
+- [x] Dataset acima de `MAX_ROWS_FULL_PROFILE` é amostrado e o metadado indica isso
 
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_ingestion.py`
-- [ ] Manual: nenhum
+- [x] Tests pass: `pytest tests/test_ingestion.py`
+- [x] Manual: nenhum
 
 **Dependencies:** Task 1
 
