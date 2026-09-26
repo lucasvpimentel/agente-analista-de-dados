@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 from src.profiling.pipeline import build_profile
-from src.ui import upload
+from src.ui import sidebar, upload
 from src.ui.tabs import colunas, correlacoes, qualidade, visao_geral
 
 
@@ -14,6 +14,8 @@ def _cached_profile(df: pd.DataFrame) -> dict:
 st.set_page_config(page_title="DataLens", page_icon="📊", layout="wide")
 st.title("DataLens — Agente IA Analista de Dados")
 st.caption("Faça upload de uma planilha para começar.")
+
+sidebar.render()
 
 df, meta = upload.render()
 
