@@ -189,17 +189,17 @@ z-score. Funções separadas para dados de histograma/boxplot (Plotly fica na Ta
 ---
 
 ### Task 7: Estatísticas categóricas
-- [ ] Not started
+- [x] Done
 
 **Description:** `src/profiling/categorical.py`: cardinalidade, moda, top N frequências,
 alerta de categoria rara (abaixo de threshold configurável em `config.py`).
 
 **Acceptance criteria:**
-- [ ] Cardinalidade e moda corretas em dataset de teste
-- [ ] Categorias abaixo do threshold aparecem no alerta de "rara"
+- [x] Cardinalidade e moda corretas em dataset de teste
+- [x] Categorias abaixo do threshold aparecem no alerta de "rara"
 
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_profiling_categorical.py`
+- [x] Tests pass: `pytest tests/test_profiling_categorical.py`
 
 **Dependencies:** Task 5
 
